@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <u><h1>Login</h1></u>
+    
+   <p>Email:
+    <input type="email" name="txt" id="emal">
+</p>
+<p>Password:
+    <input type="password" name="txt1" id="paswrd">
+</p>
+<p><input type="button" value="Login" onclick="myfun3()"></p>
+
+<script>
+    function myfun3()
+    {
+        
+        if(emal.value=="")
+        {
+            alert("please enter email");
+        }
+        else if(paswrd.value=="")
+        {
+            alert("please enter password ");
+        }
+        else
+        {
+        
+        sessionStorage.setItem("lemail",emal.value);
+        sessionStorage.setItem("dpaswrd",paswrd.value);
+
+        window.location.href="welcome.html"
+        }
+    }
+
+</script>
+    
+</body>
+</html>

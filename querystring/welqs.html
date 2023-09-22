@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <u><h1>Welcome</h1></u>
+    
+    <p>Name: <label id="lblname"></label></p>
+    
+    <p>Gender: <label id="lblgender"></label></p>
+
+    <!-- <p><input type="button" value="Logout" onclick="myfun3()"></p> -->
+
+    <script>
+        var qs=new URLSearchParams(window.location.search);
+
+  
+        if(qs.has("name"))
+        {
+            lblname.innerHTML=qs.get("name");
+        }
+        if(qs.has("gender"))
+        {
+            lblgender.innerHTML=qs.get("gender");
+        }
+
+        // function myfun3()
+        // {
+        //     window.location.href="loginqs.html";
+        // }
+
+    </script>
+</body>
+</html>

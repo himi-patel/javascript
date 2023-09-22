@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>marksheet</title>
+</head>
+<body>
+    <center><h2>MARKSHEET</h2></center>
+
+    <p><label>
+        Enter Marks:1
+    </label>
+<input type="text" name="txt" id="val1"></p>
+<p><label>
+    Enter Marks:2
+</label>
+<input type="text" name="txt1" id="val2"></p>
+<p><label>
+    Enter Marks:3
+</label>
+<input type="text" name="txt2" id="val3"></p>
+<p><label>
+    Enter Marks:4
+</label>
+<input type="text" name="txt3" id="val4"></p>
+<p><label>
+    Enter Marks:5
+</label>
+<input type="text" name="txt4" id="val5"></p>
+
+<p><input type="button" value="Submit" onclick="myfun()"style="height: 30px; width: 60px" >
+    <input type="button" value="Exit"  onclick="myfun1()"style="height: 30px; width: 60px" >
+    <input type="button" value="Clear" onclick="myfun2()"style="height: 30px; width: 60px" ></p>
+
+    <center><h2>Result</h2></center>
+    <p><label>
+       Total:-
+    </label>
+    <input type="text" name="txt5" id="val6"></p>
+    <p><label>
+        Percentage:-
+     </label>
+     <input type="text" name="txt6" id="val7"></p>
+
+     <p><label>
+        Grade:-
+     </label>
+     <input type="text" name="txt7" id="val8"></p>
+     <p id="lbl"></p>
+    <script>
+
+function myfun()
+{
+    var m1=parseInt(val1.value)
+    var m2=parseInt(val2.value)
+    var m3=parseInt(val3.value)
+    var m4=parseInt(val4.value)
+    var m5=parseInt(val5.value)
+
+    var t=m1+m2+m3+m4+m5;
+    val6.value=t;
+
+    var avg=t/5;
+
+    
+    val7.value=avg;
+
+    if(avg>=70)
+    {
+        val8.value="A+";
+    }
+    else if(avg>60)
+    {
+        val8.value="A"
+    }
+    else if(avg>50)
+    {
+        val8.value="B"
+    }
+
+    else if(avg>40)
+    {
+        val8.value="c"
+    }
+    else
+    {
+        val8.value="-"
+    }
+
+  
+    if(avg>40)
+{
+    lbl.innerHTML="CONGRATULATION YOU HAVE PASS"
+}
+else
+{
+    lbl.innerHTML="YOU HAVE FAIL"
+}
+
+function myfun1()
+{
+  val6.value=""
+  val7.value=""
+  val8.value=""
+        
+}
+function myfun2()
+{
+    Window.close();
+}
+
+
+}
+    </script>
+</body>
+</html>

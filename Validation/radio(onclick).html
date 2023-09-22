@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="radio" name="male" id="rdo1" value="Male" onclick="myfun()">Male
+    <input type="radio" name="male" id="rdo2" value="Female" onclick="myfun()">Female
+
+    <!-- <input type="button" value="submit" onclick="myfun()"> -->
+    <p id="lbl"></p>
+  
+    <script>
+        function myfun()
+        {
+            if(rdo1.checked==true)
+            {
+                lbl.innerHTML=rdo1.value
+            }
+            else if(rdo2.checked==true)
+            {
+                lbl.innerHTML=rdo2.value
+            }
+            else
+            {
+                alert("please click or choose gender")
+            }
+        }
+    </script>
+</body>
+</html>

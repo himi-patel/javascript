@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>age cal</title>
+  </head>
+  <body>
+    <p>
+      <label>Enter Your Age:</label> <input type="text" name="txt" id="age" />
+    </p>
+    <p>
+      <input
+        type="button"
+        value="Click Here"
+        onclick="myfun()"
+        style="height: 35px; width: 80px"
+      />
+    </p>
+
+    <p>
+      <label>Your Total Months:</label>
+      <input type="text" name="txt" id="mon" />
+    </p>
+    <p>
+      <label>Your Total Weeks:</label>
+      <input type="text" name="txt1" id="week" />
+    </p>
+    <p>
+      <label>Ypur Total Days:</label>
+      <input type="text" name="txt2" id="days" />
+    </p>
+    <p>
+      <label>Your Total Hrs:</label> <input type="text" name="txt3" id="hrs" />
+    </p>
+    <p>
+      <label>Ypur Total Min:</label> <input type="text" name="txt4" id="min" />
+    </p>
+    <p>
+      <label> Your Total Sec:</label> <input type="text" name="txt5" id="sec" />
+    </p>
+    <script>
+        function myfun()
+        {
+            var ag=parseInt(age.value)
+
+            mon.value=ag*12
+
+            week.value=ag*52
+
+            days.value=ag*365
+
+            hrs.value=ag*8760
+
+            min.value=ag*525600
+
+            sec.value=ag*31536000
+
+        }
+        
+    </script>
+  </body>
+</html>

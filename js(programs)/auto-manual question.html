@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <audio controls autoplay  style="display: none;" id="ad1">
+        <source src="" >
+    </audio>
+    <p>QUE : 5 X 2 = ?</p>
+    <input type="radio" name="ans" id="rdo1" value="8">8
+    <br><br>
+    <input type="radio" name="ans" id="rdo2" onclick="myfun5()">9
+     <br><br>
+     <input type="radio" name="ans" id="rdo3">10
+     <br><br>
+     <input type="radio" name="ans" id="rdo4">11
+<br><br>
+
+
+     <button onclick="myfun()">Submit</button>
+     <button onclick="myfun1()">Auto</button>
+     <button onclick="myfun2()">Manual</button>
+
+     <br><br>
+
+     <label for="" id="lbl1"></label>
+     <script>
+        var mode=0;
+        var smode=0;
+        function myfun()
+        {
+            var a,b,c,d;
+            if(smode=1)
+            {
+                if(rdo1.checked==true||rdo2.checked==true||rdo3.checked==true||rdo4.checked==true)
+                {
+                    ad1.src="wrong.mp3" 
+
+                    a=parseInt(rdo1.value)
+
+                }
+            }
+            
+            lbl1.innerHTML=a
+        
+
+        } 
+         function myfun1()
+        {
+           mode=1
+        } 
+        function  myfun5()
+        {
+            if(mode=1)
+            {
+                if(rdo2.checked==true)
+            {
+              ad1.src="right.mp3"
+            }
+            }
+        }
+        function myfun2()
+        {
+            smode=1
+        }
+
+     </script>
+</body>
+</html>

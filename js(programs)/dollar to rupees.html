@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dollar to rupees</title>
+  </head>
+  <body>
+    <label>enter value=</label>
+    <input type="text" name="text" id="txt1" />
+
+    <p>
+      <label>result=</label>
+      <input type="text" name="res" id="reslt" />
+    </p>
+
+    <p><input type="button" value="D TO RS." onclick="myfun()" /></p>
+    <p><input type="button" value="RS. TO D" onclick="myfun1()" /></p>
+    <p><input type="button" value="CM. TO FOOT" onclick="myfun2()" /></p>
+    <p><input type="button" value="KM TO FOOT" onclick="myfun3()" /></p>
+    <p><input type="button" value="POUND TO KG" onclick="myfun4()" /></p>
+    <p><input type="button" value="F TO C" onclick="myfun5()" /></p>
+    <p><input type="button" value="EXIT" onclick="myfun6()" /></p>
+    <script>
+      function myfun() {
+        var a = parseInt(txt1.value);
+        reslt.value = a * 82.19;
+      }
+      function myfun1() {
+        var a = parseInt(txt1.value);
+        reslt.value = a /82.19;
+      }
+      function myfun2() {
+        var a = parseInt(txt1.value);
+        reslt.value = a /30.48;
+      }
+      function myfun3() {
+        var a = parseInt(txt1.value);
+        reslt.value = a * 3280;
+      }
+      function myfun4() {
+        var a = parseInt(txt1.value);
+        reslt.value = a *0.454;
+      }
+      function myfun5() {
+        var a = parseInt(txt1.value);
+        reslt.value = (a -32)* 5/9;
+      }
+      function myfun6() {
+        // var a = parseInt(txt1.value);
+        // reslt.value = 0;
+        window.close();
+      }
+    </script>
+  </body>
+</html>

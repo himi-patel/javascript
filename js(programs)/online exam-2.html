@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   .box
+   {
+    margin: auto;
+    width: 70%;
+
+   }
+   .box h3
+   {
+    background-color: rgb(205, 15, 192);
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    padding: 7px 0px;
+
+   }
+   .clr
+   {
+    background-color: mediumslateblue;
+    padding: 10px;
+   }
+   .clr1
+   {
+   
+    background-color: rgb(255, 161, 208);
+    padding: 10px;
+   }
+   .qns
+   {
+    padding: 10px;
+   }
+
+   button
+   {
+    margin-top: 10px;
+    padding: 10px;
+
+   }
+
+  
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h3>ONLINE EXAM</h3>
+<div class="qns">
+        <div class="clr">
+        <label for="">Q.1--> 12+13 ?
+            <br><br>
+            A <input type="radio" name="s1" id="rdo1"> 21
+            B<input type="radio" name="s1" id="rdo2"> 25
+            C<input type="radio" name="s1" id="rdo3"> 27
+     
+        </label>
+        </div>
+       
+        
+        <div class="clr1">
+        <label for="">Q.2--> 5*12 ?
+            <br><br>
+            A<input type="radio" name="s2" id="rdo4"> 60
+            B<input type="radio" name="s2" id="rdo5"> 85
+            C<input type="radio" name="s2" id="rdo6"> 70
+            
+        </label>
+        </div>
+  
+        <div class="clr">
+        <label for="">Q.3--> 65-10+90 ?
+            <br><br>
+            A<input type="radio" name="s3" id="rdo7"> 145
+            B<input type="radio" name="s3" id="rdo8"> 155
+            C<input type="radio" name="s3" id="rdo9"> 135
+            
+        </label>
+        </div>
+        <div class="clr1">
+        <label for="">Q.4--> 128/8 ?
+            <br><br>
+            A<input type="radio" name="s4" id="rdo10"> 24
+            B<input type="radio" name="s4" id="rdo11"> 12
+            C<input type="radio" name="s4" id="rdo12"> 16
+     
+        </label>
+        </div>
+
+  
+        <div class="clr">
+        <label for="">Q.5--> X+23=35 then x=?
+            <br><br>
+            A<input type="radio" name="s5" id="rdo13"> 12
+            B<input type="radio" name="s5" id="rdo14"> 16
+            C<input type="radio" name="s5" id="rdo15"> 22
+     
+        </label>
+
+    </div>
+    <button onclick="myfun()">Submit</button>
+    <button onclick="myfun1()">Clear</button>
+    <button onclick="myfun2()">Exit</button>
+<br><br>
+  <label for="">Attend:-
+    <input type="text" name="" id="txt1">
+  </label>
+  <br><br>
+  <label for="">Unattend:-
+    <input type="text" name="" id="txt2">
+  </label>
+  <br><br>
+  <label for="">Wrong Answer:-
+    <input type="text" name="" id="txt3">
+  </label>
+  <br><br>
+  <label for="">Right Answer:-
+    <input type="text" name="" id="txt4">
+  </label>
+        </div>
+    </div>
+
+    <script>
+function myfun()
+{
+    var at=0,un=0,wa=0,ra=0;
+
+        if(rdo1.checked==true || rdo3.checked == true)
+        {
+            at++;
+            wa++;
+        }
+        else if(rdo2.checked==true)
+        {
+            at++;
+            ra++;
+        }
+        else 
+        {
+            wa++;
+            un++;
+        }
+    
+        if(rdo5.checked==true || rdo6.checked == true)
+        {
+            at++;
+            wa++;
+        }
+        else if(rdo4.checked==true)
+        {
+            at++;
+            ra++;
+        }
+        else 
+        {
+            wa++;
+            un++;
+        }
+
+         if(rdo7.checked==true||rdo9.checked==true)
+        {
+            at++;
+            wa++;
+        }
+
+        else if(rdo8.checked==true)
+        {
+            at++;
+            ra++;
+        }
+        else 
+        {
+            wa++;
+            un++;
+        }
+        if(rdo10.checked==true||rdo12.checked==true)
+        {
+            at++;
+           wa++;
+        }
+        else if(rdo11.checked==true)
+        {
+            at++;
+           ra++;
+        }
+        else 
+        {
+            wa++;
+            un++;
+        }
+        if(rdo15.checked==true||rdo14.checked==true)
+        {
+            at++;
+           wa++;
+        }
+        else if(rdo13.checked==true)
+        {
+            at++;
+            ra++;
+        }
+       
+        else 
+        {
+            wa++;
+            un++;
+        }
+
+        
+        
+        txt1.value=at;
+        txt2.value=un;
+        txt3.value=wa;
+        txt4.value=ra;
+    }
+    function myfun1()
+    {
+        
+    }
+    function myfun2()
+    {
+        window.close()
+    }
+    </script>
+</body>
+</html>

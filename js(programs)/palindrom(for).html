@@ -1,0 +1,52 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>palindrom</title>
+</head>
+<body>
+ 
+<p>eneter value=<input type="text" id="txt1"></p>
+    <p><input type="button" value="click(palindrom)" onclick="myfun()"></p>
+    <script>
+           
+        function myfun()
+       {
+   
+        let a=parseInt(txt1.value),t,s=0,b;
+        
+    
+      b=a;
+        
+        while(a>0)
+        {
+            
+        t=parseInt(a%10);
+        s=parseInt(s*10)+parseInt(t);
+        a=parseInt(a/10);
+  
+        
+
+        }
+        if(b==s)
+        {
+            document.write(b+" is palindrom")
+        }
+        else
+        {
+            document.write(b+" is not palindrom")
+        }
+        }
+        
+            
+            
+
+          
+        
+    </script>
+</body>
+</html>

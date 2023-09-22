@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Enter date=
+    <input type="text" name="text" id="txt1">
+    </p>
+    <input type="button" value="click" onclick="myfun()">
+
+    <script>
+        function myfun()
+        {
+           var a=txt1.value;
+
+           if(a.includes("/"))
+           {
+            let arr=[]=a.split("/");
+         
+           document.write("<br>the date="+arr[0]);
+           document.write("<br>the month="+arr[1]);
+           document.write("<br>the year="+arr[2]);
+           }
+
+        else if(a.includes("-"))
+        {
+
+            let arr=[]=a.split("-")
+
+            document.write("<br>the date="+arr[0]);
+           document.write("<br>the month="+arr[1]);
+           document.write("<br>the year="+arr[2]);
+        }
+        else if(a.includes("."))
+        {
+            let arr=[]=a.split(".")
+            
+            document.write("<br>the date="+arr[0]);
+           document.write("<br>the month="+arr[1]);
+           document.write("<br>the year="+arr[2]);
+        }  
+          else if(a.includes("*"))
+        {
+            let arr=[]=a.split("*")
+            
+            document.write("<br>the date="+arr[0]);
+           document.write("<br>the month="+arr[1]);
+           document.write("<br>the year="+arr[2]);
+        }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><input type="button" value="click(1 to 1000 perfect)" onclick="myfun()"></p>
+    <script>
+        function myfun()
+        {
+            let i,sum=0,j;
+            for(i=1;i<1000;i++)
+            {
+              for(j=1;j=i;j++)
+              {
+                if(i%j==0)
+                {
+                    sum=sum+j;
+                }
+              }
+             
+                
+            }
+  
+            
+            
+
+            if(j==sum)
+            {
+                document.write(i+"perfect number"+"<br>");
+            }
+            
+            else
+            {
+                document.write(i+" not a perfect number"+"<br>");
+            }
+            
+
+          
+        }
+    </script>
+</body>
+</html>

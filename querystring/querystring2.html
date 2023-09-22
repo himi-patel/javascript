@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querys</title>
+</head>
+<body>
+    <h1>QUERY STRING  GET PAGE</h1>
+    <p>Name=<label id="lblname"></label></p>
+    <p>Email=<label id="lblemail"></label></p>
+    <p>Gender=<label id="lblgen"></label></p>
+    <p>Address=<label id="lbladdress"></label></p>
+    <p>Number=<label id="lblnumbr"></label></p>
+</body>
+
+<script>
+      var qs = new URLSearchParams(window.location.search);
+        if (qs.has("name")) 
+        {
+            lblname.innerHTML = qs.get("name");
+        }
+
+        if (qs.has("email")) 
+        {
+            lblemail.innerHTML = qs.get("email");
+        }
+        if(qs.has("gender"))
+        {
+            lblgen.innerHTML=qs.get("gender");
+        }
+        if(qs.has("addrrss"))
+        {
+            lbladdress.innerHTML=qs.get("addrrss");
+        }
+        if(qs.has("number"))
+        {
+            lblnumbr.innerHTML=qs.get("number");
+        }
+        
+
+</script>
+</html>

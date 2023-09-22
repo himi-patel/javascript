@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><input type="button" value="click(to add textbox)" onclick="myfun()"></p>
+    <p><input type="button" value="click(to add button)" onclick="myfun2()"></p>
+    <p><input type="button" value="click(to add radio)" onclick="myfun3()"></p>
+
+    <script>
+        function myfun()
+        {
+            let i;
+            let b=prompt("enter value");
+            for(i=1;i<=b;i++)
+            {
+                let a=document.createElement("input")
+                a.type="text"
+                a.id="txt1"
+                document.body.appendChild(a)
+                document.write("<br><br>")
+               
+            
+            }
+            
+        }
+        function myfun2()
+        {
+            let i;
+            let b=prompt("enter value");
+            for(i=1;i<=b;i++)
+            {
+            let a=document.createElement("input")
+            a.type="button"
+            a.id="txt2"
+            a.value="click"
+            a.style.padding="10px"
+            document.body.appendChild(a)
+            document.write("<br><br>")
+            }
+        }
+        function myfun3()
+        {
+            let i;
+            let b=prompt("enter value");
+            for(i=1;i<=b;i++)
+            {
+            let a=document.createElement("input")
+            a.type="radio"
+            a.id="txt3"
+            a.value="Male"
+            a.style.padding="10px"
+            document.body.appendChild(a)
+           
+            document.write("<br><br>")
+            }
+        }
+    </script>
+</body>
+</html>

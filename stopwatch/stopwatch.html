@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <style>
+        input[type=button]
+        {
+            width: 60px;
+            height: 30px; 
+        }
+    </style>
+</head>
+<body>
+    <h1>
+    H=<label id="lblh">00</label>: Min=<label id="lblmin">00</label> :Sec= <label id="lblsec">00</label> :MS= <label id="lblms">00</label></h1>
+
+    <p>
+        <input type="button" value="start" onclick="myfun1()">
+    </p>
+    
+    <p>
+        <input type="button" value="stop" onclick="myfun2()">
+
+    </p>
+      <p>
+        <input type="button" value="reset" onclick="myfun4()" >
+        </p>
+    
+    <p>
+        <input type="button" value="lap" onclick="myfun3()" >
+        </p>
+  
+
+        <p> <label id="lap" style="font-size: 30px;"></label></p>
+    
+    <script>
+        var ms=0,
+         sec=0,
+         hrs=0,
+         min=0;
+         var timer;
+
+         function timercounter()
+         {
+            ms++;
+            lblms.innerHTML=ms;
+             
+            if(ms==100)
+            {
+                sec++;
+                lblsec.innerHTML=sec;
+                   ms=0;   
+         }
+         else if(sec==60)
+         {
+            min++;
+            lblmin.innerHTML=min;
+            sec=0;
+         }
+         else if(min==60)
+         {
+            hrs++;
+            lblh.innerHTML=hrs;
+            min=0;
+         }
+        
+         }
+         function myfun1()
+         {
+            timer=setInterval(timercounter,1);
+         }
+         function myfun2()
+         {
+            clearInterval(timer);
+            // lblms.innerHTML="00";
+            // ms=0;
+         }
+         function myfun3()
+         {
+          
+            var i=0;
+       
+
+                lap.innerHTML="Lap   " +(i+1)+   "\t"+lblh.innerHTML+":"+lblmin.innerHTML+":"+lblsec.innerHTML+":"+lblms.innerHTML+"<br>";
+
+         }
+         function myfun4()
+         {
+            clearInterval(timer);
+            lblms.innerHTML="00";
+            lblsec.innerHTML="00";
+            lblh.innerHTML="00";
+            lblmin.innerHTML="00";
+          
+            
+            
+         }
+
+ </script>
+    
+</body>
+</html>

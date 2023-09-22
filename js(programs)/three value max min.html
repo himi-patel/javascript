@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>max min</title>
+</head>
+<body>
+    <label>eneter value 1:</label>
+    <input type="text" name="txt1" id="txt1">
+<p>
+    <label>eneter value 2:</label>
+    <input type="text" name="text2" id="txt2"></p>
+
+    <label>eneter value 3:</label>
+    <input type="text" name="txt3" id="txt3">
+<p>
+  <input type="button" value="max" onclick="myfun()"style="height: 30px; width: 40px">
+  <input type="button" value="min" onclick="myfun2()" style="height: 30px; width: 40px">
+  </p>
+
+  <label>result=</label>
+  <input type="text" name="reslt" id="reslt1">
+
+  <script>
+
+      function myfun()
+      {
+      var a=parseInt(txt1.value)
+      var b=parseInt(txt2.value)
+      var c=parseInt(txt3.value)
+
+      if(a>b && a>c)
+      {
+        reslt1.value=a;
+      }
+      else if(b>a && b>c)
+      {
+        reslt1.value=b;
+      }
+      else 
+      {
+        reslt1.value=c;
+      }
+    }
+
+    function myfun2()
+    {
+       
+     var a=parseInt(txt1.value)
+      var b=parseInt(txt2.value)
+      var c=parseInt(txt3.value)
+
+      if(a<b && a<c)
+      {
+        reslt1.value=a;
+      }
+      else if(b<a && b<c)
+      {
+        reslt1.value=b;
+      }
+      else 
+      {
+        reslt1.value=c;
+      }
+    }
+  </script>
+    
+</body>
+</html>

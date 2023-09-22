@@ -1,0 +1,49 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+
+.qp
+{
+    width: 450px;
+    height: 450px;
+    background-color: yellowgreen;
+    margin: auto;
+}
+.header
+{
+    
+    height: 50px;
+    background-color: wheat;
+    margin: auto;
+    text-align: center;
+}
+.q1
+{
+    height: 70px;
+    background-color: violet;
+    padding: 5px;
+}
+.q2
+{
+    height: 70px;
+    background-color: thistle;
+    padding: 5px;
+}
+li
+{
+    float: left;
+    padding: 5px;
+    list-style: none;
+    line-height: 30px;
+}
+
+button
+{
+    width: 147px;
+    padding: 20px;
+    margin-top: 10px ;
+    box-shadow: 1px 1px 5px 0px;
+}

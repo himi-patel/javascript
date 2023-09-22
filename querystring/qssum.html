@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qs sum</title>
+</head>
+<body>
+   <u> <h1>SUM</h1></u>
+
+   <p>Enter value 1:
+    <input type="text" name="value1" id="val1">
+   </p>
+   <p>Enter value 2:
+    <input type="text" name="value2" id="val2">
+   </p>
+   <p>
+    <input type="button" value="sum" onclick="myfun()">
+   </p>
+
+   <script>
+    function myfun()
+    {
+
+        let sum;
+        sum= parseInt(val1.value)+parseInt(val2.value);
+
+        window.location.href="qssum2.html?val1="+val1.value+"&val2="
+        +val2.value+"&sum="+sum;
+
+
+    }
+   </script>
+
+
+</body>
+</html>

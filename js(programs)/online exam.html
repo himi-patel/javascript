@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="exam.css">
+</head>
+
+<body>
+
+    <div class="main">
+
+        <div class="qp">
+
+
+            <audio id="aud1" autoplay controls>
+                <source src="" />
+            </audio>
+
+
+            <div class="header">
+                <h1>Online Exam</h1>
+            </div>
+            <div class="paper">
+                <div class="q1">
+
+                    <h3>Q.1-- 12+13? 
+                        <img id="img1" width="25px">
+
+                
+                    </h3>
+                    <ol type="a">
+                        <li>a. <input type="radio" name="q1" id="a1"> 21</li>
+                        <li>b. <input type="radio" name="q1" id="a2"> 25</li>
+                        <li>c. <input type="radio" name="q1" id="a3"> 27</li>
+                    </ol>
+
+                </div>
+
+                <div class="q2">
+
+                    <h3>Q.2-- 5*12?   
+                        <img id="img2" width="25px" > 
+                    
+                        
+
+                    </h3>
+
+                    <ol type="a">
+                        <li>a. <input type="radio" name="q2" id="a4"> 60</li>
+                        <li>b. <input type="radio" name="q2" id="a5"> 85</li>
+                        <li>c. <input type="radio" name="q2" id="a6"> 70</li>
+                    </ol>
+
+                </div>
+
+
+                <div class="q1">
+
+                    <h3>Q.3-- 65-10+90?  
+                        <img id="img3" width="25px"> 
+
+                    </h3>
+
+                    <ol type="a">
+                        <li>a. <input type="radio" name="q3" id="a7"> 145</li>
+                        <li>b. <input type="radio" name="q3" id="a8"> 155</li>
+                        <li>c. <input type="radio" name="q3" id="a9"> 135</li>
+                    </ol>
+
+                </div>
+
+                <div class="q2">
+
+                    <h3>Q.4-- 128/8=?  
+                        <img id="img4" width="25px">
+                    
+                    </h3>
+
+                    <ol type="a">
+                        <li>a. <input type="radio" name="q4" id="a10"> 24</li>
+                        <li>b. <input type="radio" name="q4" id="a11"> 12</li>
+                        <li>c. <input type="radio" name="q4" id="a12"> 16</li>
+                    </ol>
+
+                </div>
+
+                <div class="q1">
+
+                    <h3>Q.5-- X+23=35 then x= ?  
+                        <img id="img5" width="25px"> 
+                    
+                    </h3>
+
+                    <ol type="a">
+                        <li>a. <input type="radio" name="q5" id="a13"> 12</li>
+                        <li>b. <input type="radio" name="q5" id="a14"> 16</li>
+                        <li>c. <input type="radio" name="q5" id="a15"> 22</li>
+                    </ol>
+
+                </div>
+
+
+
+            </div>
+
+
+
+            <span> <button onclick="myfun1()"> submit </button></span>
+            <span> <button> clear </button></span>
+            <span> <button> Exit </button></span>
+
+
+            <div class="right">
+                
+                <h3>right ans:- <input type="text " id="txtright"></h3>
+                <h3>wrong ans:- <input type="text " id="txtwrong"></h3>
+                <h3>attended:- <input type="text" id="txtatt"></h3>
+                <h3>unattended:- <input type="text" id="txtunatt"></h3>
+
+                <h3>Get marks:- <input type="text" id="txtmark"> </h3>
+
+                <h3> cut of marks:- <input type="text" id="txtco"> </h3>
+
+                <h3> total:- <input type="text" id="txttotal"></h3>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+
+    function myfun1() {
+        var r = 0, w = 0, at = 0, ut = 0;
+
+        if (a1.checked == false && a2.checked == false && a3.checked == false) {
+            ut++;
+            img1.src="wrong.jpg";
+
+            aud1.src="wrong.mp3";
+        }
+        else if (a2.checked == true) {
+            r++;
+            at++;
+            img1.src="right.jpg";
+            aud1.src="right.mp3";
+        }
+        else {
+            w++;
+            at++;
+            img1.src="wrong.jpg";
+            aud1.src="wrong.mp3";
+
+        }
+
+
+        if (a4.checked == false && a5.checked == false && a6.checked == false) {
+            ut++;
+            img2.src="wrong.jpg";
+            aud1.src="wrong.mp3";
+        }
+        else if (a4.checked == true) {
+            r++;
+            at++;
+            img2.src="right.jpg";
+            aud1.src="right.mp3";
+        }
+        else {
+            w++;
+            at++;
+            img2.src="wrong.jpg";
+            aud1.src="wrong.mp3";
+        }
+
+        if (a7.checked == false && a8.checked == false && a9.checked == false) {
+            ut++;
+            img3.src="wrong.jpg";
+            aud1.src="wrong.mp3";
+        }
+        else if (a8.checked == true) {
+            r++;
+            at++;
+            img3.src="right.jpg";
+            aud1.src="right.mp3";
+        }
+        else {
+            w++;
+            at++;
+            img3.src="wrong.jpg";
+            aud1.src="wrong.mp3";
+        }
+
+        if (a10.checked == false && a11.checked == false && a12.checked == false) {
+            ut++;
+            img4.src="wrong.jpg";
+            aud1.src="wrong.mp3";
+        }
+        else if (a12.checked == true) {
+            r++;
+            at++;
+            img4.src="right.jpg";
+            aud1.src="right.mp3";
+        }
+        else {
+            w++;
+            at++;
+            img4.src="wrong.jpg";
+            aud1.src="wrong.mp3";
+        }
+
+        if (a13.checked == false && a14.checked == false && a15.checked == false) {
+            ut++;
+            img5.src="wrong.jpg";
+            aud1.src="wrong.mp3";
+        }
+        else if (a13.checked == true) {
+            r++;
+            at++;
+            img5.src="right.jpg";
+            aud1.src="right.mp3";
+        }
+        else {
+            w++;
+            at++;
+            img5.src="wrong.jpg";
+            aud1.src="wrong.mp3";
+        }
+
+
+        txtright.value = r;
+
+        txtwrong.value = w;
+
+        txtatt.value = at;
+
+        txtunatt.value = ut;
+
+
+        txtmark.value = r * 5;
+
+        txtco.value = "-" + (w * 2);
+
+        txttotal.value = txtmark.value - txtco.value;
+
+
+
+
+
+
+
+
+    }
+
+
+</script>
+
+
+
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loclstorage</title>
+</head>
+<body>
+       <p>Name=<label id="lblname"></label></p>
+    <p>Email=<label id="lblemail"></label></p>
+    <p>Gender=<label id="lblgender"></label></p>
+
+    <script>
+        if(localStorage.getItem["sname"]=="")
+        {
+            window.location.href="localstorage1.html";
+        }
+    
+        else
+        {
+
+        lblname.innerHTML = localStorage.getItem("sname");
+        lblemail.innerHTML=localStorage.getItem("semail");
+        lblgender.innerHTML=localStorage.getItem("sgender");
+        }
+        </script>
+    
+</body>
+</html>

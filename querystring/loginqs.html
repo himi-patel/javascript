@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login </title>
+</head>
+<body>
+    <u><h1>Login</h1></u>
+    <p>Email:
+        <input type="email" name="email" id="emal">
+    </p>
+    <p>Password:
+        <input type="password" name="password" id="paswrd">
+    </p>
+    <p>
+        <input type="button" value="Login" onclick="myfun1()">
+    </p>
+    <script>
+        var qs=new URLSearchParams(window.location.search);
+
+        function myfun1()
+        {
+
+            if(emal.value=="")
+            {
+                alert("enter email");
+            }
+            else if(paswrd.value=="")
+            {
+                alert("enter password");
+            }
+        
+      else if(qs.get("email")==emal.value && qs.get("password")==paswrd.value)
+      {
+
+        name=qs.get("name");
+        gen=qs.get("gender");
+
+        window.location.href="welqs.html?name="+name+"&gender="+gen;
+      }
+
+      
+      
+           
+
+        
+       
+        
+    }
+    </script>
+</body>
+</html>

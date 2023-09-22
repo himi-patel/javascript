@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *
+    {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .box
+    {
+        margin: auto;
+        margin-top: 50px;
+        width: 50%;
+        height: 600px;
+     background-color: aliceblue;
+        border: 4px solid black;
+        padding: 70px 50px;
+    }
+    .left,.right
+    {
+        width: 35%;
+        float: left;
+        height: 100%;
+       
+        border: 4px solid black;
+    }
+    .mid
+    {
+        width: 30%;
+        
+        float: left;
+        height: 100%;
+    }
+    input[type=button]
+    {
+        width: 70px;
+        height: 50px;
+       margin-left: 50px;
+       margin-top: 50px;
+       font-weight: bold;
+       border:2px  solid black;
+       
+    }
+    h2
+    {
+        text-align: center;
+        margin-top: 40px;
+    }
+    
+</style>
+<body>
+    <div class="box">
+        <div class="left">
+            <h2 id="c1">C++</h2>
+            <h2 id="c2">Android</h2>
+            <h2 id="c3">Java</h2>
+            <h2 id="c4">Python</h2>
+            <h2 id="c5">.NET</h2>
+
+        </div>
+        <div class="mid">
+            <p>
+                <input type="button" value=">" onclick="myfun()">
+            </p>
+            <p>
+                <input type="button" value="<" onclick="myfun1()">
+            </p>
+            <p>
+                <input type="button" value=">>" onclick="myfun2()">
+            </p>
+            <p>
+                <input type="button" value="<<" onclick="myfun3()">
+            </p>
+        </div>
+        <div class="right">
+            <h2 id="lbl"></h2>
+            <h2 id="lbl"></h2>
+            <h2 id="lbl"></h2>
+            <h2 id="lbl"></h2>
+            <h2 id="lbl"></h2>
+        </div>
+    </div>
+    <script>
+        function myfun()
+        {
+            
+        }
+
+    </script>
+</body>
+</html>

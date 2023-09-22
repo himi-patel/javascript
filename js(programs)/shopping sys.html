@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shopping sys</title>
+</head>
+<body>
+<center><h1>Shopping System</h1></center>
+
+<p>
+    <label> Enter Customer name:</label>
+    <input type="text" name="txt" id="text1">
+</p>
+<p>
+    <label> Enter Product name:</label>
+    <input type="text" name="txt" id="text2">
+</p>
+<p>
+    <label> Enter Product Price:</label>
+    <input type="text" name="txt" id="text3">
+</p>
+<p>
+    <label> Enter Product QTY:</label>
+    <input type="text" name="txt" id="text4">
+</p>
+<p><input type="button" value="Submit" onclick="myfun()" style="height: 30px; width: 60px" >
+    <input type="reset" value="Clear" style="height: 30px; width: 60px" >
+    <input type="button" value="Exit" style="height: 30px; width: 60px" ></p>
+
+    <p>
+        <label> Total Amount:</label>
+        <input type="text" name="txt" id="text5">
+    </p>
+    <p>
+        <label> Total Discount:</label>
+        <input type="text" name="txt" id="text6">
+    </p>
+    <p>
+        <label> Net Price:</label>
+        <input type="text" name="txt" id="text7">
+    </p>
+    <p id="lbl"></p>
+    
+
+<script>
+    function myfun()
+    {
+    var cn= text1.value
+    var pn= text2.value
+    var price=parseInt(text3.value)
+    var qty=parseInt(text4.value)
+
+    text5.value=price*qty
+
+        var disc=text5.value
+
+    text6.value=disc/10
+
+    var np=text6.value
+    text7.value= disc-np
+
+    lbl.innerHTML="Thank You For Shopping " + cn + " Good Luck"
+}
+
+</script>
+    
+</body>
+</html>

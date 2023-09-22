@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   enter value= <input type="text" name="" id="txt" ><br><br>
+   enter value 2= <input type="text" name="" id="txt1">
+   <br><br>
+   <!-- <label for="" id="lb"></label>
+   <br><br> -->
+   <!-- Answer is= <input type="text" name="" id="txt2">
+    <br><br> -->
+
+   <button onclick="myfun()">sum</button>
+   <br><br>
+ 
+
+   <script>
+   function myfun()
+   {
+    
+    var a=txt.value
+    var b=txt1.value
+
+    // lb.innerHTML="<span style='color:blue'>"+a+"</span>"+"<span style='color:green'>"+" "+b+"<span>"
+
+        var c=document.createElement("label")
+        c.id="lb1"
+        c.innerHTML=a
+        c.style.color="green"
+        c.style.marginRight="10px"
+        document.body.appendChild(c)
+
+       
+
+        var d=document.createElement("label")
+        d.id="lb1"
+        d.innerHTML=b
+        d.style.color="blue"
+        document.body.appendChild(d)
+
+
+   }
+   
+   </script>
+
+</body>
+</html>

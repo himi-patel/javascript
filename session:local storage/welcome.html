@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+</head>
+<body>
+    <u><h1>Welcome</h1></u>
+    
+    <p>Name: <label id="lblnam"></label></p>
+    <p>Gender: <label id="lblgnder"></label></p>
+<p> <input type="button" value="Logout" onclick="myfun4()"></p>
+    
+<script>
+   
+        if(sessionStorage.getItem["lemail"]=="")
+        {
+            window.location.href="registration.html";
+        }
+        else if(sessionStorage.getItem["dpaswrd"]=="")
+        {
+            window.location.href="registration.html";
+        }
+        else
+        {
+            lblnam.innerHTML=sessionStorage.getItem("sname");
+            lblgnder.innerHTML=sessionStorage.getItem("sgen");
+        }
+        function myfun4()
+         {
+            window.location.href="login.html"
+         }
+</script>
+</body>
+</html>

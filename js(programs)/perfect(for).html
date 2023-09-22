@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>enter value:<input type="text" name="txt" id="txt1"></p>
+    <p><input type="button" value="click(perfect)" onclick="myfun()"></p>
+    <script>
+        function myfun()
+        {
+            let i,sum=0,a=txt1.value;
+
+            for(i=1;i<a;i++)
+            {
+                if(a%i==0)
+                {
+                    sum=sum+i;
+                    // document.write(i+"<br>");
+                }
+            }
+            if(a==sum)
+            {
+                document.write(a+" is perfect number");
+            }
+            else
+            {
+                 document.write(a+" is  not a perfect number");
+            }
+        }
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qs sum</title>
+</head>
+<body>
+    <p>Sum of two value is=<label id="lblsum"></label></p>
+
+    <script>
+        var qs=new URLSearchParams(window.location.search)
+        // let sum;
+        // sum=val1.value+val2.value;
+
+       
+         if(qs.has("val1")&& qs.has("val2"))
+        {
+    
+
+            lblsum.innerHTML=qs.get("sum");
+            
+            
+        }    </script>
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>enter value1=<input type="text" name="txt" id="val1"></p>
+    <p>enter value2=<input type="text" name="txt2" id="val2"></p>
+
+    <p><input type="button" value="click(table)" onclick="myfun()"></p>
+    <script>
+        function myfun()
+        {
+        let a=parseInt(val1.value);
+        let b=parseInt(val2.value);
+
+        let i;
+        for(i=a;i<=b;i++)
+        {
+            document.write("<div style='width:120px;height:200px;float:left;;background-color: skyblue;text-align:center;border:solid 2px black;margin:10px'>");
+            for(j=1;j<=10;j++)
+            {
+                document.write(i+"  *  "+j+"  =  "+i*j+"<br>");
+            }
+            
+            document.write("</div>");
+
+            
+
+
+
+
+        
+            
+        }
+        }
+        
+
+
+
+
+    </script>
+    
+</body>
+</html>

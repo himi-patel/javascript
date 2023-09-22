@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Enter value 1=<input type="text" name="text" id="text1" /></p>
+    <p>Enter value 2=<input type="text" name="text" id="text2" /></p>
+    <p>Enter value 3=<input type="text" name="text" id="text3" /></p>
+    <p>Enter value 4=<input type="text" name="text" id="text4" /></p>
+    <p>Enter value 5=<input type="text" name="text" id="text5" /></p>
+    <p>Enter value 6=<input type="text" name="text" id="text6" /></p>
+    <input type="button" value="positive" onclick="myfun()" />
+    <script>
+      function myfun() {
+        var v1=parseInt( text1.value);
+        var v2=parseInt( text2.value);
+        var v3=parseInt( text3.value);
+        var v4=parseInt( text4.value);
+        var v5=parseInt( text5.value);
+        var v6=parseInt( text6.value);
+       
+        var a=[v1,v2,v3,v4,v5,v6]
+        // var a = [];
+        // a[0] = parseInt(text1.value);
+        // a[1] = parseInt(text2.value);
+        // a[2] = parseInt(text3.value);
+        // a[3] = parseInt(text4.value);
+        // a[4] = parseInt(text5.value);
+        // a[5] = parseInt(text6.value);
+
+        document.write("positive=");
+        for (var i = 0; i < 6; i++) {
+          if (a[i] > 0) {
+            document.write( a[i]+",");
+          }
+        }
+        document.write("\nnegative=");
+        for(i=0;i<6;i++)
+        {
+          if(a[i]<0)
+          {
+            document.write( a[i] + ",");
+          }
+        }
+        
+      }
+    </script>
+  </body>
+</html>

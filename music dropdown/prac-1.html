@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *
+    {
+    margin: 0;
+    padding: 0;
+    }
+    body
+    {
+        background-color: black;
+    }
+    .box
+    {
+        margin: auto;
+        width: 500px;
+        height: 500px;
+        margin-top: 100px;
+    }
+    audio
+    {
+        display: block;
+  width: 90%;
+
+        border-radius: 7px;
+      
+
+    }
+button
+    {
+        margin-top: 30px;
+      padding: 10px 40px;
+        border-color: rgb(33, 225, 235);
+        border-width: 2px;
+        border-style: solid;
+        background-color: rgb(255, 255, 255);
+        font-size: 30px;
+        
+        border-radius: 7px;
+        
+    }
+    select
+    {
+        margin-top: 60px;
+        margin-left: 10px;
+      padding: 10px 40px;
+        border-color: rgb(33, 225, 235);
+        border-width: 2px;
+        border-style: solid;
+        background-color: rgb(255, 255, 255);
+        font-size: 30px;
+        border-radius: 7px;
+    }
+    option
+    {
+        font-size: medium;
+     
+    }
+
+</style>
+</head>
+
+<body>
+    <div class="box">
+
+    <audio controls autoplay id="music">
+        <source src="" id="source"> <!-- Added id="source" attribute for the source element -->
+    </audio>
+
+   <button onclick="myfun2()">play</button>
+
+    <select name="song" id="song">
+        <option value="Kesariya Brahmastra 128 Kbps.mp3">kesariya</option>
+        <option value="Taqdeer south movie violin.mp3">taqdeer</option>
+        <option value="Buddhu Sa Man Hai.mp3">buddhu sa man</option>  
+        <option value="Raatan Lambiyan(PagalWorld.com.se).mp3">raatan Lambiyan</option>
+        <option value="Malang Sajna(PagalWorld.com.se).mp3"> malang sajna</option>
+            <option value="Tum Jaise Dosto Ka Sahara ! Rajeev Raja ! Dosti ! Hindi.mp3">dosto </option>
+    </select>
+    </div>
+
+    <script>
+        function myfun2() {
+            var music = document.getElementById("music"); // Added this line to get the music element
+            var source = document.getElementById("source"); // Added this line to get the source element
+            var song = document.getElementById("song"); // Added this line to get the selected song
+            
+
+            source.src = song.value; // Set the source of the audio element to the selected song value
+            music.load(); // Reload the audio element to play the new song
+            music.play(); // Play the audio
+        }
+        </script>
+    
+</body>
+</html>

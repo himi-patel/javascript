@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>prime</title>
+  </head>
+  <body>
+    <p> enter number:<input type="text" name="txt" id="txt1" /></p>
+    <p><input type="button" value="click(prime)" onclick="myfun()" /></p>
+
+    <script>
+      function myfun()
+       {
+        var a=txt1.value; 
+        let i,t;
+
+        for(i=2;i<a;i++)
+        {
+            if(a%i==0)
+            {
+            t=1;
+            
+            }
+             
+        }
+        if(t==1)
+        {
+            document.write(" not prime number");
+        }
+       else
+       {
+        document.write(" prime number");
+       }
+       
+
+      }
+    </script>
+  </body>
+</html>

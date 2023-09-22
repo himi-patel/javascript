@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let val1=document.createElement("label")
+        val1.innerHTML="Enter value="
+        document.body.appendChild(val1)
+
+
+        let txt1=document.createElement("input")
+        txt1.type="text"
+        txt1.id="txt1"
+        document.body.appendChild(txt1)
+
+        document.write("<br><br>")
+
+        let val2=document.createElement("label")
+        val2.innerHTML="Enter value="
+        document.body.appendChild(val2)
+
+        let txt2=document.createElement("input")
+        txt2.type="text"
+        txt2.id="txt2"
+        document.body.appendChild(txt2)
+        document.write("<br><br>")
+
+        let btn3=document.createElement("input")
+        btn3.type="button"
+        btn3.id="btn"
+        btn3.value="sum"
+        btn3.onclick=(function()
+        {
+            let a=parseInt(txt1.value);
+            let b=parseInt(txt2.value);
+            
+            txt4.value=(a+b)
+
+            
+        })
+        document.body.appendChild(btn3)
+        document.write("<br><br>")
+
+
+        let val4=document.createElement("label")
+        val4.innerHTML="Sum is="
+        document.body.appendChild(val4)
+
+        let txt4=document.createElement("input")
+        txt4.type="text"
+        txt4.id="txt4"
+        document.body.appendChild(txt4)
+        document.write("<br><br>")
+
+
+    </script>
+    
+</body>
+</html>

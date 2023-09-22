@@ -1,0 +1,71 @@
+<!-- find sum,sub,mul,divi using js. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pract1</title>
+  </head>
+  <body>
+    <label>enter the value 1:</label>
+    <input type="text" name="val1" id="txt1" />
+
+    <p><label>enter the value 2:</label> <input type="text" id="txt2" name="val2" /></p>
+
+    <input type="button" value="+" onclick="myfun1()" style="height: 30px; width: 30px" />
+    <input type="button" value="-" onclick="myfun2()" style="height: 30px; width: 30px" />
+    <input type="button" value="*" onclick="myfun3()"style="height: 30px; width: 30px" />
+    <input type="button" value="/" onclick="myfun4()"style="height: 30px; width: 30px" />
+    <p>
+      <label>Result=</label>
+      <input type="text" name="result" id="txtres" />
+      <!-- <p>Result: <label id="lbl1"></label></p> -->
+    </p>
+  </body>
+
+
+  <script>
+
+
+function myfun1()
+{
+    var a=parseInt( txt1.value);
+    var b=parseInt( txt2.value);
+    var t=a+b;
+
+    txtres.value=t;
+    // lbl1.innerHTML=t;
+}
+function myfun2()
+{
+    var a=parseInt(txt1.value);
+    var b=parseInt( txt2.value);
+    var t=a-b;
+
+    txtres.value=t;
+
+}
+function myfun3()
+{
+    var a=parseInt (txt1.value);
+    var b=parseInt (txt2.value);
+    var t=a*b;
+
+    txtres.value=t;
+
+}
+function myfun4()
+{
+    var a=parseInt (txt1.value);
+    var b=parseInt (txt2.value);
+    var t=a/b;
+
+    txtres.value=t;
+
+}
+
+
+
+  </script>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+</head>
+<body>
+    <u><h1>Registration</h1></u>
+    
+    <p>Name: 
+        <input type="text" name="txt" id="txt1">
+    </p>
+    <p>Email:
+        <input type="text" name="txt1" id="txt2">
+    </p>
+    <p>Password:
+        <input type="password" name="txt2" id="txt3">
+    </p>
+    <p>Gender:
+        <input type="radio" name="male" id="rdo1" value="Male">Male
+        <input type="radio" name="female" id="rdo2" value="Female">Female
+    </p>
+    <p><input type="button" value="Submit" onclick="myfun()"></p>
+    <script>
+        function myfun()
+
+        {
+        sessionStorage.setItem("sname",txt1.value);
+        sessionStorage.setItem("semail",txt2.value);
+        sessionStorage.setItem("spasswrd",txt3.value);
+
+        var gen=""
+        if(rdo1.checked==true)
+        {
+            gen=rdo1.value;
+        }
+        else if(rdo2.checked==true)
+        {
+            gen=rdo2.value;
+        }
+        sessionStorage.setItem("sgen",gen);
+        window.location.href="login.html";
+    }
+    </script>
+
+    
+</body>
+</html>

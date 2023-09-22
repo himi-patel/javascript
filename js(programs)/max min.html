@@ -1,0 +1,70 @@
+<!-- find out max/min using js. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>prac2</title>
+  </head>
+  <body>
+    <label>enter the value 1:</label>
+    <input type="text" name="val1" id="valu1"/>
+
+    <p><label>enter the value 2:</label> <input type="text" name="val2" id="valu2" /></p>
+<!-- 
+    <p><label>enter the value 3:</label> <input type="text" name="val3" id="valu3" /></p> -->
+
+    <input type="button" value="max" onclick="fun1()" style="height: 30px; width: 40px" />
+    <input type="button" value="min" onclick="fun2()" style="height: 30px; width: 40px" />
+    <input type="button" value=" "onclick="fun3()"  style="height: 30px; width: 40px" />
+
+    <p>
+      <label>Result=</label>
+      <input type="text" name="result"  id="txt1"/>
+    </p>
+    <script>
+       function fun1()
+       
+{
+    var a=parseInt( valu1.value);
+    var b=parseInt( valu2.value);
+    if(a>b)
+    {
+        txt1.value=a
+    }
+   else
+   {
+    txt1.value=b
+   }
+
+}
+function fun2()
+{
+    var a=parseInt( valu1.value);
+    var b=parseInt( valu2.value);
+    if(a<b)
+    {
+        txt1.value=a
+    }
+   else
+   {
+    txt1.value=b
+   }
+}
+function fun3()
+{
+    var a=parseInt( valu1.value);
+    var b=parseInt( valu2.value);
+    if(a==b)
+    {    
+        txt1.value="both value are same"
+}
+else
+{
+    txt1.value="no value given"
+}
+}
+    </script>
+  </body>
+</html>

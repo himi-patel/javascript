@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUERY STRING</title>
+    
+</head>
+<body>
+    <h1>QUERY STRING</h1>
+    <p>Enter name:<input type="text" name="txt" id="txt1"></p>
+    <p>Enter email: <input type="email" name="email" id="txt2"></p>
+    <p>Gender: <input type="radio" value="male" name="male" id="rdo1">Male
+        <input type="radio" value="female" name="male" id="rdo2">Female </p>
+        <p>Contact no:
+            <input type="number" name="number" id="numbr">
+        </p>
+        Address:<textarea id="txt3" ></textarea><br>
+        <p>
+    <input type="button" value="click querystring" id="btn" onclick="myfun()"></p>
+
+    <script>
+        function myfun()
+        {
+            var gen="";
+            if(rdo1.checked==true)
+            {
+                gen=rdo1.value;
+            }
+            else if(rdo2.checked==true)
+            {
+                gen=rdo2.value;
+            }
+
+            window.location.href = "querystring2.html?name=" + txt1.value + "&email=" + txt2.value  +"&gender="+ gen +"&addrrss="+txt3.value+"&number=" +numbr.value;
+        }
+
+    </script>
+    
+</body>
+</html>

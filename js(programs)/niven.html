@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niven</title>
+</head>
+<body>
+    <p>enter the value:<input type="text" name="txt" id="txt1"></p>
+    <input type="button" value="click(armstrong)" onclick="myfun()">
+    
+    <script>
+        function myfun()
+        {
+            let a=parseInt(txt1.value),t,s=0,b;
+            b=a;
+            while(a>0)
+            {
+                t=parseInt(a%10);
+                s=parseInt(s+t);
+                a=parseInt(a/10);
+
+             
+
+            }
+            if(b%s==0)
+
+            {
+                document.write(b+" is niven number");
+            }
+            else
+            {
+                document.write(b+" is not a niven number");
+            }
+
+        }
+    </script>
+</body>
+</html>

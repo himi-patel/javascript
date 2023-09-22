@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>harmonic</title>
+</head>
+<body>
+    <p>Enter the number: <input type="text" name="txt" id="txt1"></p>
+    <p><input type="button" value="click(harmonic)" onclick="myfun
+    ()"></p>
+    <script>
+        function myfun()
+        {
+            let a=txt1.value;
+            let sum=0,i,s;
+
+            for(i=1;i<=a;i++)
+            {
+                sum=sum+1/i;
+                document.write("1/"+i+"+");
+                s=sum.toFixed(2);
+            }
+          
+         
+            document.write("="+s);
+
+        }
+    </script>
+</body>
+</html>
