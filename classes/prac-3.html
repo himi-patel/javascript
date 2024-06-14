@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    enter id= <input type="text" name="" id="txt1"><br><br>
+    enter name= <input type="text" name="" id="txt2"><br><br>
+
+    <button onclick="add()">ADD+</button>
+    <button onclick="show()">Show</button>
+ <script>
+
+
+    let arr=[]
+    i=0
+class employee
+{
+    constructor(id,name)
+    {
+        this.id=id;
+        this.name=name;
+    }
+
+
+    detail()
+    {
+        arr[i]=this.id+" "+this.name+"<br><br>";
+        i++;
+    }
+
+}
+
+
+function add()
+{
+    var e1=new employee(txt1.value,txt2.value)
+    e1.detail();
+}
+
+function show()
+{
+
+    for(i=0;i<arr.length;i++)
+    {
+        document.write(arr[i]);
+    }
+
+}
+
+ </script>
+
+
+</body>
+</html>
+

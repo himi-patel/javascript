@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    enter val1=<input type="text" name="" id="txt1"><br><br>
+    enter val2=<input type="text" name="" id="txt2"><br><br>
+    enter val3=<input type="text" name="" id="txt3"><br><br>
+    enter val4=<input type="text" name="" id="txt4"><br><br>
+    enter val5=<input type="text" name="" id="txt5"><br><br>
+
+    <input type="button" value="odd"  onclick="myfun()">
+    <input type="button" value="min"  onclick="myfun1()"><br><br>
+
+   answer= <label for="" id="txt6"></label>
+    <script>
+    
+function myfun()
+{
+    var a=[];
+    a[0]=parseInt(txt1.value);
+    a[1]=parseInt(txt2.value);
+    a[2]=parseInt(txt3.value);
+    a[3]=parseInt(txt4.value);
+    a[4]=parseInt(txt5.value);
+
+    document.write("odd number=")
+    for(i=0;i<5;i++)
+    {
+    if(a[i]%2==0)
+    {
+        document.write(a[i]+"<br>")
+    }
+
+  
+}
+document.write("\n\n")
+
+document.write("even number=")
+    for(i=0;i<5;i++)
+    {
+    if(a[i]%2!=0)
+    {
+        document.write(a[i]+"<br>")
+    }
+
+  
+}
+}
+    </script>
+</body>
+</html>

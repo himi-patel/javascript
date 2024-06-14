@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    enter id= <input type="text" name="" id="txt1"><br><br>
+    enter name= <input type="text" name="" id="txt2"><br><br>
+    
+    <!-- enter id= <input type="text" name="" id="id2"><br><br>
+    enter name= <input type="text" name="" id="name2"><br><br> -->
+
+    <button onclick="funshow()">show</button>
+        <button onclick="funadd()">add +</button>
+      <br><br>
+
+
+    <script>
+
+    
+var arr=[];
+var i=0;
+
+        
+
+        class Employee
+        {
+            constructor(id,name)
+            {
+                this.id=id;
+                this.name=name;
+            }
+            detail()
+            {
+            //    document.write(this.id+" "+this.name+"<br>");
+                arr[i]=this.id+" "+this.name+"<br>";
+                i++;
+                // alert("successss");
+            }
+        }
+       
+       
+        function funadd()
+       {
+        let e1=new Employee(txt1.value,txt2.value);
+        e1.detail();
+       }
+       function funshow()
+       {
+        for(i=0;i<arr.length;i++)
+        {
+            document.write(arr[i]);
+
+        }
+       }
+
+
+
+
+
+
+    
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="myfun()">click</button>
+    <script>
+        function myfun()
+        {
+            let a=[[13,54],[43,22],[23,34]]
+           
+        
+            for(i=0;i<a.length;i++)
+            {
+                for(j=0;j<2;j++)
+                {
+                    document.write(a[i][j]+"  &nbsp;")
+                }
+                document.write("<br><br>")
+            }
+        
+            for(i=0;i<2;i++)
+            {
+                for(j=0;j<3;j++)
+                {
+                    
+                    document.write(a[i][j]+"  &nbsp;")
+                    
+                }
+                document.write("<br><br>")
+            }
+        }
+    </script>
+</body>
+</html>

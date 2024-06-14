@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="myfun()">click</button>
+    <script>
+        function myfun()
+        {
+            let arr=[[14,3,4],[4,52,16],[7,83,91]]
+
+            for(i=0;i<3;i++)
+            {
+                for(j=0;j<3;j++)
+                {
+                    for(k=j+1;k<3;k++)
+
+                    {
+                        if(arr[i][j]<arr[i][k])
+                        {
+                            temp=arr[i][j];
+                            arr[i][j]=arr[i][k];
+                            arr[i][k]=temp;
+
+                        }
+                    }
+                }
+            }
+            for(i=0;i<3;i++)
+            {
+                for(j=0;j<3;j++)
+                {
+                    document.write(arr[i][j]+"&nbsp; ")
+
+                }
+                document.write("<br><br>")
+            }
+        }
+    </script>
+</body>
+</html>

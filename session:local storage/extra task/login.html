@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+   Username= <label for=""><input type="text" name="name" id="txt1"></label><br><br>
+   Password=<label for=""><input type="text" name="password" id="txt2"></label><br><br>
+    <button onclick="myfun()">Login</button>
+
+    <script>
+        function myfun()
+        {
+        if(txt1.value=="")
+        {
+            alert("please enter username");
+        }
+        else if(txt2.value=="")
+        {
+            alert("please enter password");
+        }
+        sessionStorage.setItem("username",txt1.value)
+        sessionStorage.setItem("password",txt2.value)
+        window.location.href="regestration.html"
+       
+    }
+    </script>
+</body>
+</html>

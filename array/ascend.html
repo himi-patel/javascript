@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    enter val1=<input type="text" name="" id="txt1"><br><br>
+    enter val2=<input type="text" name="" id="txt2"><br><br>
+    enter val3=<input type="text" name="" id="txt3"><br><br>
+    enter val4=<input type="text" name="" id="txt4"><br><br>
+    enter val5=<input type="text" name="" id="txt5"><br><br>
+
+    <input type="button" value="click"  onclick="myfun()"><br><br>
+  <label for="" id="lb1"></label><br><br>
+    <script>
+
+function myfun()
+        {
+
+            var a=[];
+            a[0]=parseInt(txt1.value);
+            a[1]=parseInt(txt2.value);
+            a[2]=parseInt(txt3.value);
+            a[3]=parseInt(txt4.value);
+            a[4]=parseInt(txt5.value);
+
+          
+            let j,temp;
+            for(let i=1;i<5;i++)//insertion sort
+            {  
+              temp=a[i];
+              j=i-1;
+
+              while(j>=0 && a[j]>temp)
+              {
+                a[j+1]=a[j];
+                j--;
+            }
+            a[j+1]=temp;    
+              
+
+            }
+         
+            for(i=0;i<5;i++)
+            {
+                console.log(a[i])
+            }
+     
+
+
+        }
+    </script>
+    
+</body>
+</html>

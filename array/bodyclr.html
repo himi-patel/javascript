@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="myfun()">click</button>
+    <script>
+        let arr=["green","blue","red","black","orange","brown"]
+        var i=0
+        function timer()
+        {
+          
+        document.body.style.backgroundColor=arr[i]
+        i++;
+        if(i==arr.length)
+        {
+            i=0;
+        }
+      
+    }
+    function myfun()
+    {
+        timer=setInterval(timer,100)
+
+    }
+    </script>
+</body>
+</html>

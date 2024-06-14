@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     var fruits=["apple","banana","mango"]
+     var name=["himi","khushi","dhruvi"]
+     console.log(fruits.length)
+
+     //toString()
+     console.log(fruits.toString())
+
+     //join
+     console.log(fruits.join( " + "))
+        
+     //pop
+     console.log(fruits.pop())
+
+     //push
+     console.log(fruits.push("berry"))
+     console.log(fruits)
+
+    //shift
+    console.log(fruits.shift())
+
+    //unshift
+    console.log(fruits.unshift("strawberry"))
+    console.log(fruits)
+
+    //length
+    fruits[fruits.length]="kiwi"
+    console.log(fruits)
+
+    //delete
+    delete fruits[0]
+    console.log(fruits)
+
+    //concat()
+    console.log(fruits.concat(name))
+        
+    //splice
+    console.log(fruits.splice(1,1,"pinapple"))
+
+    //slice
+    console.log(name.slice(3))
+    console.log(name)
+    
+    </script>
+</body>
+</html>

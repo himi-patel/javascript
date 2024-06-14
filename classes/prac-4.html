@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- how many employee: <input type="text" name="" id="txt1"><br><br> -->
+    employee name: <input type="text" name="" id="txt2"><br><br>
+    employee Basic salary: <input type="text" name="" id="txt3"><br><br>
+
+    <button onclick="show()">show</button>
+    <button onclick="add()">add</button>
+
+    <script>
+        let arr=[],i=0;
+       
+        class employee
+        {
+            constructor(name,salary)
+            {
+          
+                this.name=name;
+                this.salary=parseInt(salary);
+                this.hra=parseInt(this.salary*10/100);
+                this.da=parseInt(this.salary*5/100);
+                this.total=((this.salary)+(this.hra)+(this.da));
+                this.pf=parseInt(this.total*7/100)
+                this.netsalary= ((this.total)-(this.pf));
+            }
+            detail()
+            {
+                
+
+
+              arr[i]=(i+1)+`\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0`+this.name+`\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0`+this.salary+`\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0`+this.hra+`   \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 `+this.da+`\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0`+this.total+` \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0   \u00A0\u00A0\u00A0`+this.pf+` \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0`+this.netsalary+`\u00A0\u00A0\u00A0\u00A0 ` +"<br><br>";
+              i++;
+               
+
+            }
+         
+           
+        }
+   
+    
+    function employeeRecord()
+    {
+        document.write(`*******************************Employee Record**********************************`+"<br><br>");
+
+        document.write(`NO \u00A0\u00A0\u00A0\u00A0 Name  \u00A0\u00A0\u00A0\u00A0\u00A0  Salary \u00A0\u00A0\u00A0\u00A0 HRA(+10%) \u00A0\u00A0\u00A0\u00A0 DA(+5%) \u00A0\u00A0\u00A0\u00A0 TotalSalary \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 PF(-7%)\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 NetSalary`);
+document.write("<br><br>");
+
+        
+
+    }
+
+    function show()
+    {
+        employeeRecord()
+        for(i=0;i<arr.length;i++)
+        {
+        document.write(arr[i]);
+        }
+       
+    }
+    function add()
+    {
+       
+        let e1=new employee(txt2.value,txt3.value);
+        e1.detail();
+
+        txt2.value=""
+        txt3.value=""
+
+    }
+    </script>
+    
+</body>
+</html>

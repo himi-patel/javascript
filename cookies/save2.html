@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    stored data is=
+    <label for="" id="lbl1"></label>
+    <script>
+        var cookiesArray=document.cookie.split(";")
+        for(i=0;i<cookiesArray.length;i++)
+        {
+            var valueArray=cookiesArray[i].split("=")
+            if(valueArray[0].trim()=="data")
+            {
+                document.getElementById("lbl1").innerHTML=valueArray[1]
+            }
+        }
+    </script>
+</body>
+</html>

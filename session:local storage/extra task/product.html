@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      width: 70%;
+      margin: auto;
+      margin-top: 90px;
+      display: flex;
+    }
+    .photo1,
+    .photo2 {
+      text-align: center;
+      float: left;
+      width: 50%;
+    }
+    button {
+      padding: 10px 20px;
+      border: 1px solid black;
+      background-color: transparent;
+    }
+    a {
+      text-decoration: none;
+      text-transform: capitalize;
+      cursor: pointer;
+      color: black;
+      display: none;
+    }
+    button:hover {
+      background-color: black;
+      border: 1px solid rgb(0, 0, 0);
+      cursor: pointer;
+      color: white;
+    }
+  </style>
+  <body>
+    <center><h1>PRODUCT</h1></center>
+    <div class="container">
+      <div class="photo1">
+        <img src="image2.png" alt="" /><br /><br />
+        <button onclick="myfun()" id="btn">Download</button><br /><br />
+        Sec=<label for="" id="lbl">00</label><br /><br />
+        <a href="image2.png" id="link1" download="image2.png"
+          >click to download</a
+        >
+      </div>
+
+      <div class="photo2">
+        <img src="image3.png" alt="" /><br /><br />
+        <button onclick="myfun1()">Download</button><br /><br />
+        Min=<label for="" id="lbl2">00</label><br /><br />
+        <a href="image3.png" id="link2" download="image3.png"
+          >click to download</a
+        >
+      </div>
+    </div>
+    <script>
+
+      var sec = 0;
+      var timer = 0;
+      var min = 0;
+
+      function myfun() {
+        if (sessionStorage.getItem("password") == 5114) {
+          alert("registration completed👍🏻");
+        }
+        if (sessionStorage.getItem("password") == null) {
+          alert(
+            "you are not  register user so u have to wait 60sec for download"
+          );
+
+          timer = setInterval(timercounter, 100);
+
+        }
+      }
+
+      function timercounter() {
+        sec++;
+        lbl.innerHTML = sec;
+
+        if (sec == 60) {
+          clearInterval(timer);
+          sec = 0;
+          link1.style.display = "block";
+        }
+      }
+  
+      function myfun1() {
+
+        if (lbl.innerHTML == 60) {
+          
+          timer = setInterval(timercounter1, 100);
+          
+
+        } 
+        else {
+   
+
+          alert("u r downloaded 1 item from our website so u have to wait 2min for new download");
+        }
+      
+
+      }
+      function timercounter1() {
+            min++;
+            lbl2.innerHTML = min;
+            if (min == 2) {
+              clearInterval(timer);
+              min = 0;
+              link2.style.display = "block";
+              
+
+            }
+          }
+
+    </script>
+  </body>
+</html>

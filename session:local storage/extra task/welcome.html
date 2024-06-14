@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center><h1>welcome page</h1>
+    <img src="image1.png" alt="userphoto">
+    <label for="" id="lbl1"></label><br><br>
+    <label for=""id="lbl2"></label><br><br>
+    <label for=""id="lbl3"></label><br><br>
+    <button onclick="myfun()">logout</button>
+    </center>
+    <script>
+
+        lbl1.innerHTML="<h2>"+"Welcome "+sessionStorage.getItem("username")+"</h2>"
+        var date=new Date()
+        lbl2.innerHTML="Joining Date:"+date.toLocaleDateString()
+        lbl3.innerHTML="Gender: "+sessionStorage.getItem("gender")
+        function myfun(){
+        window.location.href="login.html"
+        }
+    </script>
+</body>
+</html>

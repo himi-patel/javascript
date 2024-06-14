@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="myfun()">click</button>
+    <script>
+        let arr=[[1,4,5],[2,3,6],[7,9,10]]
+        function myfun(){
+            
+            document.write("even numbers=")    
+            for(i=0;i<3;i++)
+            {
+                for(j=0;j<3;j++)
+                {  
+                    if(arr[i][j]%2==0)
+                    {
+                        document.write(arr[i][j]+",")
+                    }
+                }
+                
+            }
+            document.write("<br>"+"odd numbers=")
+            for(i=0;i<3;i++)
+            {
+                for(j=0;j<3;j++)
+                {
+                    if(arr[i][j]%2!=0)
+                    {
+                        document.write(arr[i][j]+",")
+                    }
+                }
+            }
+
+
+        }
+        </script>
+    
+</body>
+</html>

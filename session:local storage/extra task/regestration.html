@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regestration</title>
+</head>
+<body>
+
+
+        <h1>Registaration</h1>
+    Fullname=<label for=""><input type="text" name="fullname" id="name"></label><br><br>
+    Username=<label for=""><input type="text" name="username" id="user"></label><br><br>
+    Password=<label for=""><input type="password" name="password" id="pswrd"></label><br><br>
+    Image=<label for=""><input type="file" name="" id="img"></label><br><br>
+    Gender=<label for="">
+        <input type="radio" name="male" id="rdo1" value="Male">Male
+        <input type="radio" name="male" id="rdo2" value="Female">Female
+            
+    </label>
+    <br><br>
+    
+<button onclick="myfun()">Regestration</button>
+<!-- <button><a href="product.html" style="text-decoration: none;color: black;">product</a></button>
+<button><a href="login.html" style="text-decoration: none;color: black;">Login</a></button> -->
+
+<script>
+    function myfun()
+    {
+
+        if(sessionStorage.getItem("password")==pswrd.value)
+        {
+            var gen="";
+        if(rdo1.checked==true)
+        {
+         gen=rdo1.value
+        }
+        else if(rdo2.checked==true)
+        {
+            gen=rdo2.value
+        }
+        else
+        {
+            alert("please select gender")
+        }
+        sessionStorage.setItem("gender",gen)
+        }
+        
+        
+        else
+        {
+            alert("please enter correct password your password is invalid");
+        }
+
+        document.cookie="password="+pswrd.value;
+
+        window.location.href="product.html"
+        
+   
+       
+    
+    
+}
+</script>
+    
+</body>
+</html>

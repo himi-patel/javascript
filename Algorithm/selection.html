@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="txt1"></p>
+    <script>
+        var n=5,a=[1,34,52,23,32];
+        var temp;
+        for(i=0;i<n;i++)
+        {
+           
+            min=i;
+
+            for(j=i+1;j<n;j++)
+            {
+                if(a[j]<a[min])
+                {
+                    min=j;
+                }
+            }
+            if(min!=i)
+            {
+                
+                temp = a[i];
+                a[i]=a[min];
+                a[min]=temp;
+            }
+       
+        }
+
+
+
+
+        for(i=0;i<n;i++)
+        {
+           txt1.value=document.write(a[i]+"<br>")
+        }
+
+</script>
+</body>
+</html>

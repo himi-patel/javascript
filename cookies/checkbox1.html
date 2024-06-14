@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  usename= <input type="text" name="value1" id="txt1" placeholder="username"><br><br>
+    password=<input type="text" name="value2" id="txt2" placeholder="password"><br><br>
+    <button onclick="setcookie()">set cookie</button>
+    <button onclick="showcookie()">show cookie</button>
+    <br><br>
+    <input type="checkbox" id="detail" name="detail"  value="keep me login">
+
+    <label for="detail">keep me login</label>
+
+    <script>
+function setcookie()
+{
+    let exp=Date('october,2024 18:23:00')
+    document.cookie="un="+txt1.value + ";expires=" +exp;
+    document.cookie="ps="+txt2.value + ";expires=" +exp;
+   
+
+}
+function showcookie()
+{
+
+    window.location.href="checkbox2.html"
+}
+    </script>
+
+</body>
+</html>
